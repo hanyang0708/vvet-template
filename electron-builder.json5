@@ -1,0 +1,45 @@
+/**
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+    "appId": "com.smallpig.desktop",
+    "asar": true,
+    "directories": {
+        "output": "release/${version}"
+    },
+    "files": [
+        "dist"
+    ],
+    "mac": {
+        "artifactName": "${productName}_${version}.${ext}",
+        "target": [
+            "dmg"
+        ]
+    },
+  "win": {
+      "target": [
+          {
+              "target": "nsis",
+              "arch": [
+                  "x64"
+              ]
+          }
+      ],
+    "artifactName": "${productName}_${version}.${ext}"
+  },
+  "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false
+  },
+  "publish": [
+      {
+          "provider": "generic",
+          "url": "http://127.0.0.1:8080"
+      }
+  ],
+  "releaseInfo": {
+      "releaseNotes": "版本更新的具体内容"
+  },
+}

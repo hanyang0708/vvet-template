@@ -6,8 +6,8 @@
 
 1. 可以直接克隆此项目
 2. 安装 vvet-template 脚手架
-```angular2html
-npm install vvet-template
+```
+npm install -g vvet-template
 
 vvet-template create demo-name
 

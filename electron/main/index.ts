@@ -16,6 +16,7 @@ import { app, BrowserWindow, shell, ipcMain, screen, Menu } from 'electron';
 import { release } from 'os';
 import { join } from 'path';
 import windowHello from './modules/windowHello';
+import loadExtension from './modules/loadExtension';
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -68,6 +69,7 @@ function createWindow() {
 
     /** 扩展方法*/
     windowHello();
+    loadExtension();
 }
 
 app.whenReady().then(createWindow);

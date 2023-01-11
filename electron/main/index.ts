@@ -48,9 +48,6 @@ function createWindow() {
         icon: join(process.env.PUBLIC, 'favicon.ico'),
         width: width,
         height: height,
-        fullscreen: false,
-        titleBarStyle: 'hidden',
-        resizable: false,
         webPreferences: {
             preload,
         },
